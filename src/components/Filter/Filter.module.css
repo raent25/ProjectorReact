@@ -1,0 +1,124 @@
+.filter {
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  grid-template-areas: "artist artist" "genre decade" "country country" "btn btn";
+}
+
+.errors {
+  position: absolute;
+  transform: translateY(-100%);
+  color: red;
+  font-size: 8px;
+}
+
+.errorsList {
+  position: absolute;
+  transform: translateY(-100%);
+  top: 0;
+  left: 0;
+  color: red;
+  font-size: 8px;
+}
+
+.item {
+  height: 42px;
+  border: 1px solid #edeef0;
+  border-radius: 4px;
+  padding: 0 20px 0 14px;
+  cursor: pointer;
+  position: relative;
+}
+
+#artist {
+  grid-area: artist;
+}
+
+#genre {
+  grid-area: genre;
+}
+
+#decade {
+  grid-area: decade;
+}
+
+#country {
+  grid-area: country;
+}
+
+#filter-btn {
+  grid-area: btn;
+  margin-bottom: 2px;
+}
+
+.alertToInput {
+  position: absolute;
+  z-index: 2;
+  font-size: 10px;
+  color: red;
+  transform: translateY(-10px);
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.arrow {
+  transition-duration: 500ms;
+}
+
+.options {
+  top: 44px;
+  width: 100%;
+  transform: translateX(-15px);
+  position: absolute;
+  border: 1px solid #edeef0;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fff;
+  display: none;
+}
+
+.option {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  height: 44px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.optionActive {
+  background-color: #edeef0;
+}
+
+.option:hover {
+  background-color: #edeef0;
+}
+
+.listActive .options {
+  display: block;
+}
+
+.listActive .arrow {
+  transform: rotateX(180deg);
+}
+
+@media screen and (width >= 1000px) {
+  .filter {
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    grid-template-areas: "artist artist artist" "genre decade country" "btn btn btn";
+  }
+}
